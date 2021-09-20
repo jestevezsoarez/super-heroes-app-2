@@ -1,0 +1,20 @@
+<div class="row m-5">
+    <div class="col-md-12">
+        <h1>{{ heroe.nombre | uppercase }} <small>({{ heroe.aparicion | date:'YYYY'}})</small></h1>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" [alt]="heroe.nombre">
+        <button class="btn btn-outline-danger btn-block m-4" (click)="Regresar()">Regresar</button>
+    </div>
+    <div class="col-md-8">
+        <h2>{{ heroe.nombre }}</h2>
+        <hr>
+        <p>{{ heroe.bio }}</p>
+        <img src="./assets/img/dc.png" alt="DC" class="logo" *ngIf="heroe.casa == 'DC'">
+        <img src="./assets/img/marvel.png" alt="Marvel" class="logo" *ngIf="heroe.casa == 'Marvel'">
+    </div>
+</div>

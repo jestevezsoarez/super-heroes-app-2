@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col m-3">
+        <h1>Resultado de la búsqueda de: <small>{{ termino }}</small></h1>
+        <hr>
+
+        <div class="alert alert-primary" role="alert" *ngIf="heroesBuscados.length == 0">
+            No existen resultados para la búsqueda: {{ termino }}!
+          </div>
+
+          
+        <div class="card-columns animated fadeIn">
+            <app-heroe-tarjeta *ngFor="let item of heroesBuscados" 
+                                [item]="item" 
+                                [i]="item.indice"
+                                (heroeSeleccionado)="verHeroe($event)">
+            </app-heroe-tarjeta>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
