@@ -17,8 +17,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" [routerLink]="['/about']" routerLinkActive="active">About</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/jestevezsoarez/super-heroes-app-2" target="_blank">View the code on GitHub</a>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0" (submit)="$event.preventDefault()">
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar héroe..." aria-label="Search" #txtBusqueda (keydown.enter)="buscarHeroe(txtBusqueda.value)">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="button" (click)="buscarHeroe(txtBusqueda.value)">Buscar</button>
         </form>
